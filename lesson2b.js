@@ -41,4 +41,8 @@ const prices = [100, 250, 400, 50, 80];
 const pricesWithVAT = prices.map(price => price * 1.16);
 console.log("Prices with 16% VAT:", pricesWithVAT);
 
+let addition = 0;
+let total= pricesWithVAT.map(price => addition = addition + price);
+console.log("Total Cost with VAT:", addition);
+
 
