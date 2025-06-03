@@ -29,4 +29,16 @@ let {username, email}= user;
 console.log(username)
 console.log(email)
 
+// exmple2
+let country = {
+    countryname : "Kenya",
+    population : 54000000,
+    continent: "Africa",
+    language : "Eng"
+};
+// The properties of the above object have been destructured as shown below
+let {countryname, population, continent, language} = country;
+console.log("The name of the country is: " + countryname)
+console.log("The country is on " + continent+ "n continent")
+
 //Assignment: create an object product with properties
