@@ -35,6 +35,9 @@ let newName = name.trim().replace("Alice", "Jessica");
 console.log(newName); // This will replace "Alice" with "Jessica"
 
 //Assignment. find out how to replace multiple occurrences in a string at once
+//n JavaScript, to replace multiple different substrings in a string at once, you have a few options.
+//  The best method uses regular expressions (RegEx) combined with a replacement function.
+
 
 // 10. charAt(index) - this function normally finds/outputs the character at a given string
 console.log(name.trim().charAt(4)); // This will return the character at index 4 in the string
