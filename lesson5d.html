@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">Hello, world!</h1>
+    <button onclick="changeTitle()">Change Text</button>
+    <button onclick="changeContent()">change content</button>
+
+    <script>
+      const changeTitle = () => {
+        let element = document.getElementById("title");
+        element.innerText = "You clicked the button";
+      };
+
+      const changeContent = () =>{
+        document.getElementById("title").innerHTML = "<span style='color:red'>Welcome <strong>Back</strong> ! </span>"
+        getElementcontent();
+        // what does the function invoked above helps in?
+      };
+
+      const getElementcontent =() =>{
+        // get the content of an element (h1)
+        let h1 = document.getElementById("title");
+        let content = h1.innerText
+        console.log("content: " + content)
+      }
+    </script>
+  </body>
+</html>
+
+<!--  Assignment: Create a button in HTML that changes a paragraph's text when clicked using
+ JavaScript  -->
