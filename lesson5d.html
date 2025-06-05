@@ -10,6 +10,10 @@
     <button onclick="changeTitle()">Change Text</button>
     <button onclick="changeContent()">change content</button>
 
+    <input type="text" id="myinput" value=""> <br>
+    <button onclick="getInputValue()">Get Value</button>
+
+
     <script>
       const changeTitle = () => {
         let element = document.getElementById("title");
@@ -28,6 +32,13 @@
         let content = h1.innerText
         console.log("content: " + content)
       }
+
+      const getInputValue = () => {
+        // get the value of an input field
+        let input = document.getElementById("myinput");
+        let value = input.value;
+        console.log("this is the text a person has typed: " + value);
+      };
     </script>
   </body>
 </html>

@@ -35,13 +35,13 @@ const fetchProducts = async () => {
         let [firstProduct] = await response.json(); // Destructure the first product from the array
 
         // Extract product_name and price from the first product
-        let { product_name, price } = firstProduct;
+        let { product_name, product_cost } = firstProduct;
 
         // Print product name
         console.log("Product Name: " + product_name);
 
         // Print product price
-        console.log("Price: " + price);
+        console.log("Price: " + product_cost);
     }
     catch (error) {
         // Catch and handle the errors
