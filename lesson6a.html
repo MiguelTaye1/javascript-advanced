@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<body>
+    <h1 id="mainTitle">Hover or click me!</h1>
+    <button onclick="handleClick()">Click Button!</button>
+
+    <br><br>
+    <input type="text" id="textinput" placeholder="Type something " onkeydown="handlekeydown(event)">
+    <br><br>
+
+    <select id="dropdown" onchange="handleSelectChange(event)">
+        <option value="">Select A Fruit</option>
+        <option value="Apple">Apple</option>
+        <option value="Banana">Banana</option>
+        <option value="Mango">Mango</option>
+    </select>
+
+    <br>
+    <p id="Feedback"></p>
+    <h3 id="myheading"></h3>
+
+    <br><br>
+    <form onsubmit="formsubmit(event)">
+        <input type="text" id="forminput" placeholder="Type something">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3 id ="formheading"></h3>
+    
+
+    <script>
+        const mainTitle = document.getElementById("mainTitle");
+        const Feedback = document.getElementById("Feedback");
+
+        
+        const handleClick = () => {
+            alert("The button has been clicked") 
+        };
+        //mouse over event
+        mainTitle.onclick = () =>{
+            mainTitle.style.color = "blue";
+            mainTitle.style.fontSize = "2em";
+            Feedback.innerText = "Title has been clicked!";
+            Feedback.style.color = "blue";
+        };
+
+        //on mouse over event
+        mainTitle.onmouseover = () => {
+            mainTitle.style.color = "red";
+            Feedback.innerText = "Title has been hovered!";
+            
+        };
+
+        //DICTATE WHAT HAPPENS WHEN YOU REMOVE THE MOUSE ONTOP
+        mainTitle.onmouseout = function() {
+            mainTitle.style.color = "ORANGE";
+            Feedback.innerText = "Title has been unhovered!";
+            Feedback.style.color = "purple";
+        };
+
+        
+        const myheading = document.getElementById("myheading");
+        //change event on dropdown
+
+        const handleSelectChange = (event) => {
+            let selectedValue = document.getElementById("dropdown").value;
+            myheading.innerText = `You selected: ${selectedValue}`;
+            myheading.style.color = "green";
+            
+        };
+
+        //keydown event
+        const handlekeydown = (event) => {
+           myheading.innerText = `You pressed: ${event.key}`;
+        };
+
+        const formheading = document.getElementById("formheading");
+
+        //submit event
+        const formsubmit = (event) => {
+            event.preventDefault(); // Prevent the form from submitting
+            formheading.innerHTML= "<h2 style = 'color: green;'>Form Submitted!</h2>";
+            alert("Form has been submitted!");
+            
+        };
+       
+    </script>
+</body>
+</html>
